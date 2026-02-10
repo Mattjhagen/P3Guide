@@ -1,9 +1,15 @@
 import React, { useState } from 'react';
-import { ArrowRight, ShieldCheck, TrendingUp } from 'lucide-react';
+import { ArrowRight, ShieldCheck, TrendingUp, Share2 } from 'lucide-react';
 import ManifestoModal from './ManifestoModal';
 
 const Hero = () => {
     const [isManifestoOpen, setIsManifestoOpen] = useState(false);
+
+    const handleShare = () => {
+        const text = encodeURIComponent("My Social Credit Score is Better Than Collateral. @P3Protocol");
+        const url = encodeURIComponent(window.location.href);
+        window.open(`https://twitter.com/intent/tweet?text=${text}&url=${url}`, '_blank');
+    };
 
     return (
         <section className="pt-32 pb-20 md:pt-48 md:pb-32 px-6">
@@ -28,7 +34,7 @@ const Hero = () => {
                     P3 analyzes your social capital and on-chain history to unlock instant liquidity.
                 </p>
 
-                <div className="flex flex-col sm:flex-row gap-4">
+                <div className="flex flex-col sm:flex-row gap-4 flex-wrap">
                     <button className="bg-primary hover:bg-primary/90 text-black px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 transition-all hover:scale-105 active:scale-95">
                         Check My Score <ArrowRight size={20} />
                     </button>
@@ -37,6 +43,13 @@ const Hero = () => {
                         className="glass-panel hover:bg-white/5 text-white px-8 py-4 rounded-full font-bold text-lg transition-all"
                     >
                         View Manifesto
+                    </button>
+                    <button
+                        onClick={handleShare}
+                        className="glass-panel hover:bg-white/5 text-zinc-400 hover:text-white px-6 py-4 rounded-full font-medium text-lg transition-all flex items-center gap-2"
+                        title="Share to X"
+                    >
+                        <Share2 size={20} />
                     </button>
                 </div>
 
