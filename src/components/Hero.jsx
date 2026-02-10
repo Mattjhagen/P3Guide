@@ -1,4 +1,3 @@
-```javascript
 import React, { useState } from 'react';
 import { ArrowRight, ShieldCheck, TrendingUp } from 'lucide-react';
 import ManifestoModal from './ManifestoModal';
@@ -72,4 +71,3 @@ const Hero = () => {
 };
 
 export default Hero;
-```
