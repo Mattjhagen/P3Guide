@@ -33,11 +33,15 @@
         if (container) {
           document.getElementById('loader-spinner').style.display = 'none';
           const text = document.getElementById('loader-text');
-          text.innerHTML = '<span style="color:#ef4444">CRITICAL STARTUP ERROR</span><br/><br/>' + event.message;
+          let msg = event.message;
+          if (!msg && event.target && (event.target.tagName === 'SCRIPT' || event.target.tagName === 'LINK')) {
+            msg = 'Resource failed to load: ' + (event.target.src || event.target.href);
+          }
+          text.innerHTML = '<span style="color:#ef4444">CRITICAL STARTUP ERROR</span><br/><br/>' + (msg || 'Unknown Error');
           text.style.textAlign = 'center';
           text.style.fontFamily = 'monospace';
         }
-      });
+      }, true); // Capture phase enabled to catch resource errors
       window.addEventListener('unhandledrejection', function (event) {
         const container = document.getElementById('loader-container');
         if (container) {
