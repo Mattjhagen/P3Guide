@@ -1,7 +1,11 @@
-import React from 'react';
+```javascript
+import React, { useState } from 'react';
 import { ArrowRight, ShieldCheck, TrendingUp } from 'lucide-react';
+import ManifestoModal from './ManifestoModal';
 
 const Hero = () => {
+    const [isManifestoOpen, setIsManifestoOpen] = useState(false);
+
     return (
         <section className="pt-32 pb-20 md:pt-48 md:pb-32 px-6">
             <div className="container mx-auto max-w-5xl">
@@ -29,8 +33,11 @@ const Hero = () => {
                     <button className="bg-primary hover:bg-primary/90 text-black px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 transition-all hover:scale-105 active:scale-95">
                         Check My Score <ArrowRight size={20} />
                     </button>
-                    <button className="glass-panel hover:bg-white/5 text-white px-8 py-4 rounded-full font-bold text-lg transition-all">
-                        View Documentation
+                    <button
+                        onClick={() => setIsManifestoOpen(true)}
+                        className="glass-panel hover:bg-white/5 text-white px-8 py-4 rounded-full font-bold text-lg transition-all"
+                    >
+                        View Manifesto
                     </button>
                 </div>
 
@@ -58,8 +65,11 @@ const Hero = () => {
                     </div>
                 </div>
             </div>
+
+            <ManifestoModal isOpen={isManifestoOpen} onClose={() => setIsManifestoOpen(false)} />
         </section>
     );
 };
 
 export default Hero;
+```

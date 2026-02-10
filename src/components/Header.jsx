@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Github, Mail, MessageCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
@@ -17,6 +17,21 @@ const Header = () => {
                     <a href="#fresh-start" className="text-sm font-medium text-zinc-400 hover:text-white transition-colors">Fresh Start</a>
                     <a href="#features" className="text-sm font-medium text-zinc-400 hover:text-white transition-colors">How it Works</a>
                     <a href="#deck" className="text-sm font-medium text-zinc-400 hover:text-white transition-colors">Pitch Deck</a>
+
+                    <div className="h-6 w-px bg-white/10 mx-2"></div>
+
+                    <div className="flex items-center gap-4">
+                        <a href="https://github.com/Mattjhagen/P3-Lending-Protocol" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-primary transition-colors" title="GitHub">
+                            <Github size={20} />
+                        </a>
+                        <a href="https://discord.gg/FnfhmdVmCu" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-blue-400 transition-colors" title="Discord">
+                            <MessageCircle size={20} />
+                        </a>
+                        <a href="mailto:admin@p3lending.space" className="text-zinc-400 hover:text-white transition-colors" title="Email">
+                            <Mail size={20} />
+                        </a>
+                    </div>
+
                     <button className="bg-white text-black px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-zinc-200 transition-colors">
                         Launch App
                     </button>
