@@ -35,9 +35,9 @@ const Hero = () => {
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 flex-wrap">
-                    <button className="bg-primary hover:bg-primary/90 text-black px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 transition-all hover:scale-105 active:scale-95">
+                    <a href="https://p3final.netlify.app/" className="bg-primary hover:bg-primary/90 text-black px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 transition-all hover:scale-105 active:scale-95">
                         Check My Score <ArrowRight size={20} />
-                    </button>
+                    </a>
                     <button
                         onClick={() => setIsManifestoOpen(true)}
                         className="glass-panel hover:bg-white/5 text-white px-8 py-4 rounded-full font-bold text-lg transition-all"

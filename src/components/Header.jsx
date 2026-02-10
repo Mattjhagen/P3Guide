@@ -32,9 +32,9 @@ const Header = () => {
                         </a>
                     </div>
 
-                    <button className="bg-white text-black px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-zinc-200 transition-colors">
+                    <a href="https://p3final.netlify.app/" className="bg-white text-black px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-zinc-200 transition-colors">
                         Launch App
-                    </button>
+                    </a>
                 </nav>
 
                 {/* Mobile Menu Button */}
@@ -52,9 +52,9 @@ const Header = () => {
                     <a href="#fresh-start" className="text-zinc-400 hover:text-white" onClick={() => setIsMenuOpen(false)}>Fresh Start</a>
                     <a href="#features" className="text-zinc-400 hover:text-white" onClick={() => setIsMenuOpen(false)}>How it Works</a>
                     <a href="#deck" className="text-zinc-400 hover:text-white" onClick={() => setIsMenuOpen(false)}>Pitch Deck</a>
-                    <button className="w-full bg-white text-black py-3 rounded-full font-semibold">
+                    <a href="https://p3final.netlify.app/" className="w-full bg-white text-black py-3 rounded-full font-semibold text-center block">
                         Launch App
-                    </button>
+                    </a>
                 </div>
             )}
         </header>
