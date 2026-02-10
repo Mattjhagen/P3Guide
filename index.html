@@ -16,6 +16,11 @@
 
 <body>
   <div id="root">
+    <!-- Netlify Forms: Hidden form for build bots -->
+    <form name="waitlist" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="email" />
+      <input type="text" name="bot-field" />
+    </form>
     <!-- Minimal Loading State with Error Trap -->
     <div id="loader-container"
       style="height: 100vh; display: flex; align-items: center; justify-content: center; color: #666; font-family: 'Inter', sans-serif;">
