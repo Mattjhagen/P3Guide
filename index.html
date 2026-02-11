@@ -2,6 +2,15 @@
 <html lang="en">
 
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-R27DN6F1MS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-R27DN6F1MS');
+  </script>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,11 +25,6 @@
 
 <body>
   <div id="root">
-    <!-- Netlify Forms: Hidden form for build bots -->
-    <form name="waitlist" netlify netlify-honeypot="bot-field" hidden>
-      <input type="text" name="email" />
-      <input type="text" name="bot-field" />
-    </form>
     <!-- Minimal Loading State with Error Trap -->
     <div id="loader-container"
       style="height: 100vh; display: flex; align-items: center; justify-content: center; color: #666; font-family: 'Inter', sans-serif;">
