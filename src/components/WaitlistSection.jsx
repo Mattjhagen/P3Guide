@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const WaitlistSection = () => {
     return (
@@ -17,19 +17,15 @@ const WaitlistSection = () => {
                         Don't let your social capital go to waste. Sign up for early access to P3 Protocol and start leveraging your reputation for liquidity.
                     </p>
 
-                    <div className="bg-white/5 backdrop-blur-lg border border-white/10 p-2 md:p-3 rounded-2xl max-w-lg mx-auto overflow-hidden">
-                        <iframe
-                            src="https://docs.google.com/forms/d/e/1FAIpQLSfhi5RvVS8poa33JxoZUYZdEh8-mCPxZlQz5zuAv4sosOVExw/viewform?embedded=true"
-                            width="100%"
-                            height="600"
-                            frameBorder="0"
-                            marginHeight="0"
-                            marginWidth="0"
-                            className="bg-transparent"
-                            title="P3 Waitlist Form"
+                    <div className="flex justify-center">
+                        <a
+                            href="https://p3final.netlify.app"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="bg-primary text-background text-lg font-bold px-8 py-4 rounded-full hover:bg-primary/90 transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(0,229,153,0.3)] inline-flex items-center gap-2"
                         >
-                            Loading…
-                        </iframe>
+                            Join Waitlist
+                        </a>
                     </div>
                 </div>
             </div>
