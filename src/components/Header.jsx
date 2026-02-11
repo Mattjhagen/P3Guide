@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, X, Github, Mail, MessageCircle } from 'lucide-react';
+import { Menu, X, Github, Mail, MessageCircle, Facebook } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
@@ -26,6 +26,9 @@ const Header = () => {
                         </a>
                         <a href="https://discord.gg/FnfhmdVmCu" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-blue-400 transition-colors" title="Discord">
                             <MessageCircle size={20} />
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=61573009392683" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-blue-600 transition-colors" title="Facebook">
+                            <Facebook size={20} />
                         </a>
                         <a href="mailto:admin@p3lending.space" className="text-zinc-400 hover:text-white transition-colors" title="Email">
                             <Mail size={20} />
